@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cc-app-configmap
+data:
+  SERVER_PORT: "8080"
+  EXPIRES_AFTER_SEC: "60"
+  DB_URL: "postgres-service"
+  DB_NAME: "cc_project"
+  DB_PORT: "5432"
+

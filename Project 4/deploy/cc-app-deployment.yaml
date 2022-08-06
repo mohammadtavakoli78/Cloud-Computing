@@ -1,0 +1,132 @@
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: cc-app-deployment
+#  labels:
+#    app: cc-app-deployment
+#spec:
+#  replicas: 2
+#  selector:
+#    matchLabels:
+#      app: cc-app-deployment
+#  template:
+#    metadata:
+#      labels:
+#        app: cc-app-deployment
+#    spec:
+#      containers:
+#        - name: cc-app-deployment
+#          image: amirhasance79/cc_app:2
+#          ports:
+#            - containerPort: 8000
+#          env:
+#            - name: EXPIRES_AFTER_SEC
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: cc-app-configmap
+#                  key: EXPIRES_AFTER_SEC
+#            - name: DB_URL
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: cc-app-configmap
+#                  key: DB_URL
+#            - name: DB_NAME
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: postgres-config
+#                  key: DB_NAME
+#            - name: DB_PORT
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: cc-app-configmap
+#                  key: DB_PORT
+#
+#---
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: cc-app-service
+#spec:
+#  selector:
+#    app: cc-app-deployment
+#  type: LoadBalancer
+#  ports:
+#  - protocol: TCP
+#    port: 8000
+#    targetPort: 8000
+#    nodePort: 30000
+#
+#
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cc-app-deployment
+  labels:
+    app: cc-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cc-app-deployment
+  template:
+    metadata:
+      labels:
+        app: cc-app-deployment
+    spec:
+      containers:
+        - name: cc-app-deployment
+          image: amirhasance79/cc_app:2
+          ports:
+            - containerPort: 8000
+          env:
+            - name: EXPIRES_AFTER_SEC
+              valueFrom:
+                configMapKeyRef:
+                  name: cc-app-configmap
+                  key: EXPIRES_AFTER_SEC
+
+            - name: DB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-config
+                  key: DB_URL
+
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-config
+                  key: POSTGRES_DB
+
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: cc-app-configmap
+                  key: DB_PORT
+
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cc-app-secret
+                  key: db-password
+
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: cc-app-secret
+                  key: db-user
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cc-app-service
+spec:
+  selector:
+    app: cc-app-deployment
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+      nodePort: 30000

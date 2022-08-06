@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.dbName }}-config
+  labels:
+    app: {{ .Values.dbName }}
+data:
+  POSTGRES_DB: {{ .Values.dbName }}
+#  POSTGRES_USER: admin
+#  POSTGRES_PASSWORD: test123
+  DB_URL: {{ .Values.dbName }}
