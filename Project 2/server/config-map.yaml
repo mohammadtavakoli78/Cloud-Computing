@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    serverport: 8080
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-04-01T23:34:37Z"
+  name: config-map
+  namespace: default
+  resourceVersion: "128120"
+  uid: 0e28108a-f10a-4e78-946c-c72d30283321

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: weather-app-deployment
+  name: weather-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: weather-app-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: weather-app-deployment
+    spec:
+      containers:
+      - image: mohammadta/weather-app:1.0
+        name: weather-app
+        resources: {}
+        ports:
+          - containerPort: 8080
+        volumeMounts:
+          - mountPath: config.yaml
+            subPath: config.yaml
+            name: config-map
+            readOnly: true
+      volumes:
+        - name: config-map
+          configMap:
+            name: config-map
+status: {}
