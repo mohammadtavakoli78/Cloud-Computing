@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+    <p>New Note</p>
+    <form action="{% url 'main_page' %}" method="POST">
+        <textarea name="text" style="width: 300px; height: 100px; margin-bottom: 20px;" placeholder="This is a test note"></textarea>
+        <br>
+        <input id="submit" type="submit" value="Create note" />
+    </form>
+</body>
+</html>

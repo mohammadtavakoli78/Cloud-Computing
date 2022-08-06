@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Read and destroy?</p>
+    <p>you are about to read and destroy the note with id {{url}}</p>
+    <div style="display: flex;">
+        <form action="/read/{{url}}" method="POST">
+            <button>Yes, show me the note</button>
+        </form>
+        <form action="{% url 'main_page' %}" method="GET">
+            <button>No, not now</button>
+        </form>
+    </div>
+</body>
+</html>
