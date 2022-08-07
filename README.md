@@ -33,12 +33,22 @@ Following tasks done in this project:
 > 2.  Write ```Dockerfile``` for written application and ```containerize``` it and push it ```docker hub```
 > 3.  Deploy the application on Kubernetes.<br>
 
-Some screen shots of output:<br>
+Screen shot of the output:<br>
 <img src="https://github.com/mohammadtavakoli78/Cloud-Computing/blob/master/Project%202/images/4/Screenshot%20from%202022-04-03%2002-34-55.png" width="700px" height="400px"/><br>
 
 You can access to source code by this [link](https://github.com/mohammadtavakoli78/Cloud-Computing/tree/master/Project%202).
 
 ## 💻 Third Project
+This project makes us get acquainted with ```Hadoop``` and basics of ```MapReduce```. A hadoop cluster shoud be setup by three Virtual Machines and run map reduce programmes on them. for setup cluster hadoop this [link](https://pnunofrancog.medium.com/how-to-set-up-hadoop-3-2-1-multi-node-cluster-on-ubuntu-20-04-inclusive-terminology-2dc17b1bff19) followed. The dataset used for map reduce application can be downloaded by this [link](https://www.kaggle.com/manchunhui/us-election-2020-tweets?select=hashtag_joebiden.csv).<br>
+
+Following tasks done in this project:
+> 1.  Setup ```Hadoop Cluster``` by three Virtual Machines
+> 2.  Write three map reduce programmes on run them on the cluster with this [dataset](https://www.kaggle.com/manchunhui/us-election-2020-tweets?select=hashtag_joebiden.csv).<br>
+
+Screen shot of one of three map reduce programmes output:<br>
+<img src="https://github.com/mohammadtavakoli78/Cloud-Computing/blob/master/Project%203/Images/6-1-2.PNG" /><br>
+
+You can access to source code by this [link](https://github.com/mohammadtavakoli78/Cloud-Computing/tree/master/Project%203).
 
 ## 💻 Fourth Project
 
