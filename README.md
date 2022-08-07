@@ -9,6 +9,11 @@
 - [Technologies](https://github.com/mohammadtavakoli78/Cloud-Computing#technologies)
 
 ## Introduction
+This is projects of Cloud Computing course. There are four projects.<br>
+First project makes us get acquainted with some ```Cloud Services``` like: ```Speech to Text```, ```Natural Language Understanding``` and ```Language Translator```.<br>
+Second project makes us get acquainted with ```Docker``` and basics of ```Kubernetes```.<br>
+Third project makes us get acquainted with ```Hadoop``` and basics of ```MapReduce```.<br>
+Fourth project  makes us get acquainted with ```Docker``` and ```Kubernetes```.
 
 ## 💻 First Project
 This project makes us get acquainted with some ```Cloud Services``` like: ```Speech to Text```, ```Natural Language Understanding``` and ```Language Translator```. a lightweight backend and frontend should be developed and uploaded on cloud. And then we should use cloud services mentioned earlier in our code. In this project we should develop a website that shows movies and their names, director names, their logos and their comments in four various languages. And also we should be able to add comments and show them to users.<br>
