@@ -51,6 +51,17 @@ Screen shot of one of three map reduce programmes output:<br>
 You can access to source code by this [link](https://github.com/mohammadtavakoli78/Cloud-Computing/tree/master/Project%203).
 
 ## 💻 Fourth Project
+This project makes us get acquainted with ```Docker``` and ```Kubernetes```. A lightweight application should be developed and be ```dockerized``` and deployed on kubernetes. The application is a personal note that we can add notes and observe them and delete them.<br>
+
+Following tasks done in this project:
+> 1.  Developing application
+> 2.  Write ```Dockerfile``` for written application and ```containerize``` it and push it ```docker hub```
+> 3.  Deploy the application on Kubernetes.<br>
+> 4.  Write (```ConfigMap```, ```Secret```, ```PV```, ```PVC```, ```Deployment```, ```Service```) files and apply them
+> 5.  build a ```HPA``` component that is for ```auto scaling```
+> 6.  run database with ```stateful set```
+> 7.  implement ```helm chart```
+> 8.  write ```docker-compose```
 
 ## Technologies
 Project is created with:
